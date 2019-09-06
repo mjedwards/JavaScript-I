@@ -80,20 +80,20 @@ console.log(internFive.math(3,4));
 const parent = {
   name: "Susan",
   age: 70,
-  speak: (name) => {
-    console.log (`hello, my name is ${this.name}`);
+  speak: function() {
+      return `hello, my name is ${this.name}`;
   },
   child: {
     name: "George",
     age: 50,
-    speak: (name) => {
-      return `hello, my name is ${this.name}`;
+    speak: function () {
+      return `hello, my name is ${this.name}`
     },
     grandchild: {
       name: "Sam",
       age: 30,
-      speak: (name) => {
-        return `hello, my name is ${this.name}`;
+      speak: function () {
+        return `hello, my name is ${this.name}`
       }
     }
   }
@@ -111,4 +111,3 @@ console.log(parent.speak());
 console.log(parent.child.speak());
 // Have the grandchild speak
 console.log(parent.child.grandchild.speak());
-
